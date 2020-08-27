@@ -26,7 +26,7 @@ class LazySegmentTree{
 		}
 		/**
 		 *   Adds val to the range [l,r] .
-		 *   @param2 l - left side of the range.
+		 *   @param1 l - left side of the range.
  		 *   @param2 r - right side of the range.
 		**/
 		void Update(int l, int r, T val){ 
@@ -34,7 +34,7 @@ class LazySegmentTree{
 		}
 		/**
 		 *   Returns sum of the values in the range [l,r].
-		 *   @param2 l - left side of the range.
+		 *   @param1 l - left side of the range.
  		 *   @param2 r - right side of the range.
  		 *   @return sum of the values in the range [l,r] 
 		**/
