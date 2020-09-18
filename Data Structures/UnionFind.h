@@ -1,8 +1,8 @@
 /**
-	@author: Nijad Huseynov
- 	@file: Unionfind
- 	@date: 22/08/20 23:13 	 
-*/
+ *	@author: Nijad Huseynov
+ * 	@file: Unionfind
+ * 	@date: 22/08/20 23:13 	 
+ */
  
 #pragma once 
  
@@ -18,21 +18,21 @@ class Unionfind{
 			}
 		};
 	/**
-	    Returns the parent of a given node
-	    @param node.
-	    @return parent of the node.
-	*/	
+	 *   Returns the parent of a given node
+	 *   @param v - node.
+	 *   @return parent of the node.
+	 */	
 	int get_parent(int v){
 		if(v == m_parents[v])
 			return v;
 			return m_parents[v] = get_parent(m_parents[v]);
 	}	
 	/**
-	    Returns true if the given nodes are already connected, otherwise unites them and returns false.
-	    @param1 node.
-	    @param2 node.
-	    @return true if the given nodes are connected.
-	*/
+	 *   Returns true if the given nodes are already connected, otherwise unites them and returns false.
+	 *   @param u - node.
+	 *   @param v - node.
+	 *   @return true if the given nodes are connected.
+	 */
 	bool unite(int u,int v){
 		int par_u = get_parent(u);
 		int par_v = get_parent(v);
