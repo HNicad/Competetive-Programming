@@ -4,7 +4,7 @@
  *	@date: 31/01/20 23:14	
  *	@description: Adding geometric progression to the interval with common ratio 'Q'     
  *
-**/
+ */
 
 
 
@@ -20,10 +20,10 @@ const ll Q3 = 276601605;
 
 /**
  *   Returns the n-th power of given integer modulo MOD.
- *   @param1 a - integer.
- *	 @param2 n - integer.
+ *   @param a - integer.
+ *   @param n - integer.
  *   @return (a ^ n) mod MOD
-**/
+ */
 ll power(ll a, ll n){
 	if(n==0) return 1ll;
 	if(n==1) return a%MOD;
@@ -37,7 +37,7 @@ ll power(ll a, ll n){
  *   Returns inverse of given integer modulo MOD.
  *   @param a - integer.
  *   @return (a ^ -1) mod MOD
-**/
+ */
 
 ll inv(ll a){
 	return power(a,MOD-2);
@@ -48,9 +48,9 @@ ll inv(ll a){
  * Implementation of a lazy SegmentTree with geometric addition
  *
  * To instantiate a class with common ration Q use the following syntax:
- * 		SegmentTree tree(n,Q1)
+ * 	SegmentTree tree(n,Q1)
  * To add (Q + Q^2 + Q^3 + ... + Q ^ (r-l+1)) to the range [l,r] use the following syntax:  
- * 		tree.Update(l,r)	
+ * 	tree.Update(l,r)	
  * To find the sum in the range [l,r] use the following syntax:
  *      tree.Query(l,r)
  * @note  All the operations are done modulo MOD
@@ -73,19 +73,19 @@ class SegmentTree{
 		};
 		/**
  		 *   Adds geometric progression to the range [l,r] with common ratio
- 		 *   @param2 l - left side of the range.
- 		 * 	 @param2 r - right side of the range.
-		**/
+ 		 *   @param l - left side of the range.
+ 		 *   @param r - right side of the range.
+		 */
 		void Update(int l, int r){
 			update(1,1,((int)tree.size() ) / 8,l,r,Q);
 		}
 		
 		/**
 		 *   Returns sum of the values in the range [l,r]  modulo MOD.
-		 *   @param2 l - left side of the range.
- 		 * 	 @param2 r - right side of the range.
+		 *   @param l - left side of the range.
+ 		 *   @param r - right side of the range.
  		 *   @return sum of the values in the range [l,r] 
-		**/
+		 */
 		ll Query(int l,int r){
 			return query(1,1,((int)tree.size() ) / 8,l,r) * Q3 % MOD; 
 		}
