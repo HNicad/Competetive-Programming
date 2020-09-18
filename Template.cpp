@@ -1,9 +1,9 @@
 /**
-	@author: Nijad Huseynov
- 	@file: template
- 	@date: 14/12/19 17:05 	
-	@description: template for competetive programming   
-*/
+ *	@author: Nijad Huseynov
+ *	@file: template
+ *	@date: 14/12/19 17:05 	
+ *	@description: template for competetive programming   
+ */
 
 #include <bits/stdc++.h>
 
@@ -28,6 +28,7 @@ namespace dbg
 	template<typename PType1,typename PType2>
 	ostream & operator<<(ostream & out, const pair<PType1,PType2> & p){
 		out << "(" << p.first << "," << p.second << ")";
+		return out;
 	}
 	template<typename VType>
 	ostream & operator<<(ostream & out, const vector<VType> & v){
@@ -49,6 +50,7 @@ namespace dbg
 			out << *it;	
 		}
 		out << "]";
+		return out;
 	}
 	template<typename MType1, typename MType2>
 	ostream & operator<<(ostream & out, const map<MType1,MType2> & m){
@@ -59,6 +61,7 @@ namespace dbg
 			out << "{" << it->first << ":" << it->second << "}";
 		}
 		out << "]";
+		return out;
 	}
 	void Out(){cout << endl;}
 	template<typename T, typename... U>
