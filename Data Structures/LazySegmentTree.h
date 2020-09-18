@@ -4,7 +4,7 @@
  *	@date: 24/01/20 14:06	
  *	@description: Lazy Segment Tree       
  *
-**/
+ */
 
 
 
@@ -14,7 +14,7 @@ typedef long long int ll;
 
 /**
  * Implementation of a lazy Segment Tree - Range Sum
-**/
+ */
 template <typename T>
 class LazySegmentTree{
 	public:
@@ -26,18 +26,18 @@ class LazySegmentTree{
 		}
 		/**
 		 *   Adds val to the range [l,r] .
-		 *   @param1 l - left side of the range.
- 		 *   @param2 r - right side of the range.
-		**/
+		 *   @param l - left side of the range.
+ 		 *   @param r - right side of the range.
+		 */
 		void Update(int l, int r, T val){ 
 			update(1,1,((int)node.size()-4)/4,l,r,val);
 		}
 		/**
 		 *   Returns sum of the values in the range [l,r].
-		 *   @param1 l - left side of the range.
- 		 *   @param2 r - right side of the range.
+		 *   @param l - left side of the range.
+ 		 *   @param r - right side of the range.
  		 *   @return sum of the values in the range [l,r] 
-		**/
+		 */
 		T Get(int l, int r){ 
 			return get(1,1,((int)node.size()-4)/4,l,r);
 		}	
