@@ -48,7 +48,7 @@ ll inv(ll a){
  * Implementation of a lazy SegmentTree with geometric addition
  *
  * To instantiate a class with common ration Q use the following syntax:
- * 	SegmentTree tree(n,Q1)
+ * 	SegmentTree tree(n,Q)
  * To add (Q + Q^2 + Q^3 + ... + Q ^ (r-l+1)) to the range [l,r] use the following syntax:  
  * 	tree.Update(l,r)	
  * To find the sum in the range [l,r] use the following syntax:
